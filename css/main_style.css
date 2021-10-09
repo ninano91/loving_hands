@@ -1,0 +1,501 @@
+.clearfix::after,
+.wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: 'S-CoreDream-4Regular'
+}
+
+.wrapper {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    background: #5bac3e;
+    position: relative;
+    z-index: 10;
+}
+
+header.on {
+    background: #fff;
+}
+
+header h1 {
+    width: 200px;
+    float: left;
+    padding: 24px 0;
+}
+
+header nav {
+    width: 880px;
+    float: left;
+}
+
+header nav .nav_bg {
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    display: none;
+}
+
+header nav ul.gnb {
+    width: 100%;
+}
+
+header nav ul.gnb>li {
+    width: 180px;
+    float: left;
+    font-size: 17px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+header nav ul.gnb>li:last-child {
+    width: 160px;
+}
+
+header nav ul.gnb>li>a {
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    display: block;
+    font-family: 'S-CoreDream-5Medium';
+    position: relative;
+}
+
+header nav ul.gnb>li>a::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    border-bottom: 5px solid #5bac3e;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+header nav ul.gnb>li:hover>a::after {
+    transform: scale(1);
+}
+
+header.on nav ul.gnb>li>a {
+    color: #333;
+}
+
+header.on nav ul.gnb>li:hover>a {
+    color: #5bac3e;
+}
+
+header nav ul.gnb>li>ul.sub {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0;
+    top: 100px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+    display: none;
+}
+
+header nav ul.gnb>li>ul.sub>li {
+    width: 100%;
+}
+
+header nav ul.gnb>li>ul.sub>li>a {
+    display: block;
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    line-height: 2.5;
+}
+
+header nav ul.gnb>li>ul.sub>li a:hover {
+    text-decoration: underline;
+}
+
+/* .anibtn */
+a.anibtn {
+    font-size: 19px;
+    display: inline-block;
+    padding: 14px 50px 14px 20px;
+    letter-spacing: -1px;
+    border: 1px solid #333;
+    margin-top: 60px;
+    position: relative;
+}
+
+a.anibtn i {
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    font-size: 24px;
+}
+a.anibtn:hover i{
+    animation: rightAni 1s linear ;
+}
+
+@keyframes rightAni {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*.main_visual */
+.main_visual {
+    width: 100%;
+    height: 760px;
+    background: #5bac3e;
+    box-sizing: border-box;
+    border-top: 1px solid #5bac3e;
+}
+
+.main_visual ul.slide {
+    width: 100%;
+    height: 660px;
+    position: relative
+}
+
+.main_visual ul.slide li {
+    width: 100%;
+    height: 660px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main_visual ul.slide li h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual ul.slide li a.anibtn {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-540px);
+    background: #fff;
+    border: 0;
+}
+
+/* section */
+section {
+    padding: 160px 0;
+    box-sizing: border-box;
+}
+
+section .txt_box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+section .txt_box>h2 {
+    font-size: 38px;
+    font-family: 'S-CoreDream-5Medium';
+    line-height: 4em;
+}
+
+section .txt_box>p {
+    font-size: 22px;
+    line-height: 1.6;
+    padding-top: 40px;
+}
+
+section .txt_box>a {
+    border: 1px solid #f2f2f2;
+}
+
+/* .hands */
+.hands {
+    width: 100%;
+    height: 700px;
+    background-image: url(/images/hand_shake_bg.jpg);
+    background-attachment: fixed;
+}
+
+
+/* .way */
+.way {
+    width: 100%;
+    height: 1200px;
+    background-image: url(/images/student_img.png);
+}
+
+.way .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.way .txt_box {
+    color: #222;
+}
+.way .txt_box h2{
+    line-height: 40px;
+    margin-bottom: 2em;
+    color: #222;
+
+}
+
+.way .txt_box .lhands_explain{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #222;
+}
+
+.way .txt_box .lhands_explain>li{
+    text-align: center;
+    line-height: 20px;
+    font-size: px;
+    font-weight: bold;
+    
+}
+
+.way .txt_box .lhands_explain>li>ul{
+    width: 180px;
+    height: 180px;
+    font-size: 14px;
+    border-radius: 50%;
+    margin-top: 5%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    top: 50%;
+    font-weight: normal;
+    color: #222;
+}
+.way .txt_box .lhands_explain>li>ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+}
+
+.way .txt_box .lhands_explain>li>.mento_menti{
+    justify-content: center;
+    align-items: center;
+    background-color:  #5bac3e;
+}
+
+.way .txt_box .lhands_explain>li>.mento_center{
+    background-color: #f7eb4e;
+}
+
+.way .txt_box a.anibtn {
+    border-color: #222;
+    color: #222;
+}
+
+.way .txt_box a.anibtn i {
+    left: 150px;
+}
+
+
+
+
+/*.volunteer  */
+.volunteer {
+    width: 100%;
+    height: 100%;
+    background-color: #3e445a;
+    background-image: url(/images/children_bg.jpg);
+    background-attachment: fixed;
+}
+
+.volunteer .txt_box {
+    width: 100%;
+    float: none;
+    text-align: center;
+    color: #fff;
+    height: auto;
+}
+
+.volunteer .txt_box span {
+    display: inline-block;
+    animation: spanAni 1s infinite;
+}
+
+@keyframes spanAni {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.volunteer .volunteer_box {
+    margin: 0 auto;
+    float: none;
+    padding-top: 100px;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    color: #222;
+}
+.volunteer .volunteer_box ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.volunteer .volunteer_box ul li {
+    position: static;
+    margin-bottom: 50px;
+    border: 1px solid #ebe2e5;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ebe2e5;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    color:#222;
+}
+.volunteer .volunteer_box ul li a{
+
+}
+.volunteer .volunteer_box ul li:hover{
+    background-color: #f7ec4e9a;
+    border: 1px solid #f7ec4e;
+}
+
+.volunteer .volunteer_box ul li:hover a i{
+    animation: service_btn_Ani 0.6s linear ;
+}
+
+.volunteer .volunteer_box ul li a.service_btn i{
+    margin-left: 10px;
+}
+
+@keyframes service_btn_Ani {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.volunteer p {
+    text-align: center;
+    font-size: 19px;
+    letter-spacing: -1px;
+    color: #fff;
+    line-height: 1.8;
+    font-family: "Malgun Gothic", "맑은 고딕";
+    margin-top: 80px;
+    font-size: 15px;
+}
+
+/*footer  */
+footer {
+    width: 100%;
+    font-family: "Malgun Gothic", "맑은 고딕";
+}
+
+footer .f_top {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+}
+
+footer .f_top .wrapper {
+    position: relative;
+}
+
+footer .f_top p {
+    width: 100%;
+}
+
+footer .f_top p span {
+    line-height: 76px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+}
+
+footer .f_top p .downbtn {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    font-size: 20px;
+    color: #111;
+    background: transparent;
+}
+
+footer .f_bottom {
+    width: 100%;
+    height: 212px;
+    background: #eee;
+    font-size: 14px;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+footer .f_bottom .f_logo {
+    float: left;
+}
+
+footer .f_bottom .f_mid {
+    float: left;
+    margin-left: 60px;
+    line-height: 2;
+    margin-top: 5px;
+}
+
+footer .f_bottom .f_mid p a:nth-child(n+2) {
+    margin-left: 30px;
+}
+
+footer .f_bottom .f_mid p strong {
+    font-weight: bold;
+}
+
+footer .f_bottom .f_mid p.copy {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-top: 10px;
+}
